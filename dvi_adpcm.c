@@ -1,3 +1,16 @@
+/* ADPCM codec test program, based on Intel/DVI as per text below.
+ * Operates as a standard Unix filter, with various options to
+ * select encode/decode/both and 8/16 bit audio I/O. Supports a
+ * custom 2-bit ADPCM format for higher compression ratio (similar
+ * to G726-16). See main() for command line options :)
+ *
+ * typical usage:
+ *  cat test_s16_le.raw | dvi_adpcm e > test.adpcm # encode
+ *  cat test.adpcm | dvi_adpcm d > test_s16_le.raw # decode
+ *
+ * Phlash, March 2017
+ */
+
 /***********************************************************
 Copyright 1992 by Stichting Mathematisch Centrum, Amsterdam, The
 Netherlands.
